@@ -1,0 +1,107 @@
+{% extends 'layout.html' %}
+{% block content %}
+  <!-- Hero -->
+  <section class="hero">
+    <img src="static/Images/Harvard_University.jpg"
+         alt="Banner Image"
+         width=" "
+         height=" " />
+    <div class="content">
+      <h1 class="title">
+        <span class="myH1">Our Programs</span>
+      </h1>
+      <hr>
+      <p>
+        Explore our diverse range of undergraduate,
+        <br>
+        graduate, and doctoral programs designed to
+        <br>
+        inspire, innovate, and empower your future.
+      </p>
+      <div>
+        <button class="explore" onclick="window.location.href='admissions.html'">Apply Now →</button>
+      </div>
+    </div>
+  </section>
+  <!-- Programs Section -->
+  <section class="programs-section">
+    <h2 class="section-title">Explore Our Programs</h2>
+    <p class="section-sub">Choose from our technology-focused undergraduate programs designed for the future.</p>
+    <div class="programs-grid">
+      <div class="program-card">
+        <img src="static/Images/computer science.jpg"
+             alt="Computer Science"
+             width=" "
+             height=" " />
+        <div class="program-info">
+          <div class="program-tag">Undergraduate</div>
+          <h3>Computer Science</h3>
+          <p>Master algorithms, software development, and computing systems that power the modern world.</p>
+          <div class="program-meta">
+            <span><i class="fa-regular fa-clock"></i> 4 Years</span>
+            <span><i class="fa-solid fa-book"></i> Full-Time</span>
+          </div>
+          <a href="admissions.html" class="program-btn">Apply Now →</a>
+        </div>
+      </div>
+      <div class="program-card">
+        <img src="static/Images/software engineering.jpg"
+             alt="Software Engineering"
+             width=" "
+             height=" " />
+        <div class="program-info">
+          <div class="program-tag">Undergraduate</div>
+          <h3>Software Engineering</h3>
+          <p>Build scalable, robust software systems using industry best practices and modern methodologies.</p>
+          <div class="program-meta">
+            <span><i class="fa-regular fa-clock"></i> 4 Years</span>
+            <span><i class="fa-solid fa-book"></i> Full-Time</span>
+          </div>
+          <a href="admissions.html" class="program-btn">Apply Now →</a>
+        </div>
+      </div>
+      <div class="program-card">
+        <img src="static/Images/cyber security.jpg"
+             alt="Cyber Security"
+             width=" "
+             height=" " />
+        <div class="program-info">
+          <div class="program-tag">Undergraduate</div>
+          <h3>Cyber Security</h3>
+          <p>Protect systems and networks with cutting-edge knowledge in digital security and ethical hacking.</p>
+          <div class="program-meta">
+            <span><i class="fa-regular fa-clock"></i> 4 Years</span>
+            <span><i class="fa-solid fa-book"></i> Full-Time</span>
+          </div>
+          <a href="admissions.html" class="program-btn">Apply Now →</a>
+        </div>
+      </div>
+      <div class="program-card">
+        <img src="static/Images/data science.jpg"
+             alt="Data Science"
+             width=" "
+             height=" " />
+        <div class="program-info">
+          <div class="program-tag">Undergraduate</div>
+          <h3>Data Science</h3>
+          <p>Turn raw data into powerful insights using statistics, machine learning, and visualisation tools.</p>
+          <div class="program-meta">
+            <span><i class="fa-regular fa-clock"></i> 4 Years</span>
+            <span><i class="fa-solid fa-book"></i> Full-Time</span>
+          </div>
+          <a href="admissions.html" class="program-btn">Apply Now →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- CTA Banner -->
+  <div class="cta-banner">
+    <div class="cta-text">
+      <h2>Ready to Begin Your Journey?</h2>
+      <p>Applications for the 2025/2026 academic session are now open.</p>
+    </div>
+    <a href="admissions.html">
+      <button class="cta-btn">Apply Now →</button>
+    </a>
+  </div>
+{% endblock %}

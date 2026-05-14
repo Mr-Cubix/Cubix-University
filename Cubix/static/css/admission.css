@@ -1,0 +1,246 @@
+/* ===== HERO ===== */
+.hero {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+
+.hero img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(10, 46, 35, 1), rgba(10, 46, 35, 0.8), rgba(10, 46, 35, 0.2), rgba(10, 46, 35, 0));
+    z-index: 1;
+}
+
+.content {
+    position: absolute;
+    left: 5%;
+    top: 60%;
+    transform: translateY(-50%);
+    max-width: 700px;
+    text-align: left;
+    color: white;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.title .myH1 {
+    display: block;
+    font-size: 60px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+hr {
+    width: 50px;
+    border: none;
+    height: 2px;
+    background-color: #ffd700;
+}
+
+.content p {
+    margin-top: 10px;
+    color: #e5e5e5;
+    font-size: 17px;
+    font-weight: lighter;
+}
+
+/* ===== HOW TO APPLY ===== */
+.how-to-apply {
+    padding: 70px 6%;
+    background: #f9f9f9;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #222;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.section-sub {
+    text-align: center;
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 40px;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+
+.step {
+    background: #fff;
+    padding: 30px 24px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.step:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.13);
+}
+
+.step-num {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ffd700;
+    margin-bottom: 14px;
+    font-family: 'Times New Roman', serif;
+}
+
+.step h3 {
+    font-size: 1.2rem;
+    color: #111;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.step p {
+    font-size: 0.92rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* ===== REQUIREMENTS ===== */
+.requirements-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 70px 6%;
+    flex-wrap: wrap;
+}
+
+.req-text {
+    flex: 1;
+    min-width: 280px;
+}
+
+.req-text h2 {
+    font-size: 2rem;
+    color: #0a2e23;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.req-text hr {
+    width: 50px;
+    border: none;
+    height: 2px;
+    background: #ffd700;
+    margin-bottom: 24px;
+}
+
+.req-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 30px;
+}
+
+.req-list li {
+    font-size: 0.97rem;
+    color: #444;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    line-height: 1.5;
+}
+
+.req-list li i {
+    color: #0a2e23;
+    font-size: 1rem;
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+.apply-btn {
+    padding: 12px 34px;
+    background: linear-gradient(to top, #ffd700 50%, #020000 50%);
+    background-size: 100% 200%;
+    background-position: bottom;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+    font-size: 1rem;
+}
+
+.apply-btn:hover {
+    background-position: top;
+}
+
+.req-image {
+    flex: 1;
+    min-width: 280px;
+}
+
+.req-image img {
+    width: 100%;
+    max-width: 560px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== DATES ===== */
+.dates-section {
+    padding: 70px 6%;
+    background: #f9f9f9;
+}
+
+.dates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px;
+    margin-top: 10px;
+}
+
+.date-card {
+    background: #fff;
+    padding: 30px 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.date-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.date-card i {
+    font-size: 2rem;
+    color: #ffd700;
+    margin-bottom: 14px;
+    display: block;
+}
+
+.date-card h3 {
+    font-size: 1.05rem;
+    color: #0a2e23;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.date-card p {
+    font-size: 0.95rem;
+    color: #555;
+}

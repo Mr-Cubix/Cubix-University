@@ -1,0 +1,106 @@
+{% extends 'layout.html' %}
+{% block content %}
+  <!-- Hero -->
+  <section class="hero">
+    <img src="static/Images/my uni.jpg"
+         alt="Admissions Banner"
+         width=" "
+         height=" " />
+    <div class="content">
+      <h1 class="title">
+        <span class="myH1">Admissions</span>
+      </h1>
+      <hr>
+      <p>
+        Your journey to excellence starts here.
+        <br>
+        Apply today and become part of the
+        <br>
+        Cubix University community.
+      </p>
+    </div>
+  </section>
+  <!-- How to Apply -->
+  <section class="how-to-apply">
+    <h2 class="section-title">How to Apply</h2>
+    <p class="section-sub">Follow these simple steps to begin your application.</p>
+    <div class="steps-grid">
+      <div class="step">
+        <div class="step-num">01</div>
+        <h3>Choose a Program</h3>
+        <p>Browse our available programs and select the one that aligns with your goals and interests.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <h3>Create an Account</h3>
+        <p>Sign up on our portal to access the application form and track your admission status.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <h3>Submit Application</h3>
+        <p>Fill out your application form, upload required documents, and submit before the deadline.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <h3>Await Decision</h3>
+        <p>Our admissions team will review your application and notify you via email within 2–4 weeks.</p>
+      </div>
+    </div>
+  </section>
+  <!-- Requirements -->
+  <section class="requirements-section">
+    <div class="req-text">
+      <h2>Admission Requirements</h2>
+      <hr>
+      <ul class="req-list">
+        <li>
+          <i class="fa-solid fa-check"></i> O'Level result (minimum 5 credits including English &amp; Mathematics)
+        </li>
+        <li>
+          <i class="fa-solid fa-check"></i> Valid JAMB/UTME score (minimum 180)
+        </li>
+        <li>
+          <i class="fa-solid fa-check"></i> Birth certificate or statutory declaration of age
+        </li>
+        <li>
+          <i class="fa-solid fa-check"></i> Passport photograph (white background)
+        </li>
+        <li>
+          <i class="fa-solid fa-check"></i> Letter of recommendation (optional but encouraged)
+        </li>
+      </ul>
+      <a href="signup.html">
+        <button class="apply-btn">Start Application →</button>
+      </a>
+    </div>
+    <div class="req-image">
+      <img src="static/Images/studs.jpg" alt="Students" width=" " height=" " />
+    </div>
+  </section>
+  <!-- Important Dates -->
+  <section class="dates-section">
+    <h2 class="section-title">Important Dates</h2>
+    <div class="dates-grid">
+      <div class="date-card">
+        <i class="fa-regular fa-calendar"></i>
+        <h3>Application Opens</h3>
+        <p>January 15, 2025</p>
+      </div>
+      <div class="date-card">
+        <i class="fa-solid fa-hourglass-half"></i>
+        <h3>Application Deadline</h3>
+        <p>April 30, 2025</p>
+      </div>
+      <div class="date-card">
+        <i class="fa-solid fa-envelope-open-text"></i>
+        <h3>Admission Results</h3>
+        <p>June 15, 2025</p>
+      </div>
+      <div class="date-card">
+        <i class="fa-solid fa-school"></i>
+        <h3>Resumption Date</h3>
+        <p>September 1, 2025</p>
+      </div>
+    </div>
+  </section>
+{% endblock %}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description"
+              content="Cubix University - Empowering minds. Inspiring futures. Join a community dedicated to excellence, innovation and impact." />
+        <meta name="keywords"
+              content="Cubix University, education, innovation, research, global community, academic excellence" />
+        {% if title %}
+            <title>Cubix University - {{ title }}</title>
+        {% else %}
+            <title>Cubix University</title>
+        {% endif %}
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+        {% if stylesheet %}<link rel="stylesheet" href="{{ url_for('static', filename=stylesheet) }}">{% endif %}
+        <link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+    </head>
+    <body>
+        <!-- Header Section -->
+        <header id="navbar">
+            <!--Logo-->
+            <a href='{{ url_for("home") }}' class="logo">
+                <img src="static/Images/mylogo.png"
+                     alt="Cubix Logo"
+                     width="100px"
+                     height="100px">
+            </a>
+            <!-- Navigation Section -->
+            <ul class="nav-links">
+                <li>
+                    <a href='{{ url_for("home") }}'
+                       class="{{ 'active' if active_page == 'home'}}">Home</a>
+                </li>
+                <li>
+                    <a href='{{ url_for("about") }}'
+                       class="{{ 'active' if active_page == 'about'}}">About</a>
+                </li>
+                <li>
+                    <a href='{{ url_for("program") }}'
+                       class="{{ 'active' if active_page == 'program'}}">Programs</a>
+                </li>
+                <li>
+                    <a href='{{ url_for("admission") }}'
+                       class="{{ 'active' if active_page == 'admission'}}">Admissions</a>
+                </li>
+                <li>
+                    <a href='{{ url_for("contact") }}'
+                       class="{{ 'active' if active_page == 'contact'}}">Contacts</a>
+                </li>
+            </ul>
+        </header>
+        {% block content %}{% endblock %}
+        <footer class="footer">
+            <div class="footer-container">
+                <!-- Company -->
+                <div class="footer-box">
+                    <h3>Company</h3>
+                    <a href='{{ url_for("home") }}' class="active">Home</a>
+                    <a href='{{ url_for("about") }}'>About</a>
+                    <a href='{{ url_for("program") }}'>Programs</a>
+                    <a href='{{ url_for("admission") }}'>Admissions</a>
+                    <a href='{{ url_for("contact") }}'>Contacts</a>
+                </div>
+                <!-- Resources -->
+                <div class="footer-box">
+                    <h3>Resources</h3>
+                    <a href="#">News</a>
+                    <a href="#">Events</a>
+                    <a href="#">Scholarships</a>
+                </div>
+                <!-- Contact -->
+                <div class="footer-box">
+                    <h3>Contact</h3>
+                    <p>📍 Lagos, Nigeria</p>
+                    <p>📧 info@cubix.edu</p>
+                    <p>📞 +234 xxx xxx xxxx</p>
+                    <div class="socials">
+                        <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Bottom -->
+            <div class="footer-bottom">
+                <a href="{url_for('home')}">
+                    <img src="static/Images/mylogo.png"
+                         alt="Cubix Logo"
+                         width="100px"
+                         height="100px">
+                </a>
+                <p>© 2026 Cubix University. All Rights Reserved.</p>
+            </div>
+        </footer>
+        <script src="{{ url_for('static', filename='js/main.js')}}"></script>
+        {% if script %}<script src="{{ url_for('static', filename=script)}}"></script>{% endif %}
+    </body>
+</html>
