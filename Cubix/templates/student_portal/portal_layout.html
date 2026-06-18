@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description"
+              content="Cubix University - Empowering minds. Inspiring futures. Join a community dedicated to excellence, innovation and impact." />
+        <meta name="keywords"
+              content="Cubix University, education, innovation, research, global community, academic excellence" />
+        {% if title %}
+            <title>Cubix University - {{ title }}</title>
+        {% else %}
+            <title>Cubix University</title>
+        {% endif %}
+        <link rel="stylesheet"
+              href="{{ url_for('static', filename='css/student_portal_css/student_portal_main.css') }}" />
+        {% if stylesheet %}<link rel="stylesheet" href="{{ url_for('static', filename=stylesheet) }}">{% endif %}
+        <link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+    </head>
+    <body>
+        <!-- Header Section -->
+        <nav id="navbar">
+            <!--Logo-->
+            <a href='{{ url_for("home") }}' class="logo">
+                <img src="static/Images/mylogo.png"
+                     alt="Cubix Logo"
+                     width="100px"
+                     height="100px">
+            </a>
+            <!-- Navigation Section -->
+            <ul class="nav-links">
+                <li>
+                    <a href='{{ url_for("dashboard") }}'
+                       class="{{ 'active' if active_page == 'dashboard'}}"><i class="fa-solid fa-table-columns"></i>    Dashboard</a>
+                </li>
+                <li>
+                    <a href='{{ url_for("myprofile") }}'
+                       class="{{ 'active' if active_page == 'myprofile'}}"><i class="fa-solid fa-user"></i>    My Profile</a>
+                </li>
+                <li>
+                    <a href='{{ url_for("academics") }}'
+                       class="{{ 'active' if active_page == 'academics'}}"><i class="fa-solid fa-graduation-cap"></i>    Academics</a>
+                </li>
+                <li>
+                    <a href='{{ url_for("mycourses") }}'
+                       class="{{ 'active' if active_page == 'mycourses'}}"><i class="fa-solid fa-book"></i>    My Courses</a>
+                </li>
+                <li>
+                    <a href='{{ url_for("attendance") }}'
+                       class="{{ 'active' if active_page == 'attendance'}}"><i class="fa-solid fa-calendar-check"></i>    Attendance</a>
+                </li>
+                <li>
+                    <a href='{{ url_for("result") }}'
+                       class="{{ 'active' if active_page == 'result'}}"><i class="fa-solid fa-chart-bar"></i>    Result</a>
+                </li>
+                <li>
+                    <a href='{{ url_for("timetable") }}'
+                       class="{{ 'active' if active_page == 'timetable'}}"><i class="fa-solid fa-calendar"></i>    TimeTable</a>
+                </li>
+                <li>
+                    <a href='{{ url_for("notices") }}'
+                       class="{{ 'active' if active_page == 'notices'}}"><i class="fa-solid fa-bell"></i>    Notices</a>
+                </li>
+                <li>
+                    <a href='{{ url_for("downloads") }}'
+                       class="{{ 'active' if active_page == 'downloads'}}"><i class="fa-solid fa-download"></i>    Downloads</a>
+                </li>
+                <li>
+                    <a href='{{ url_for("settings") }}'
+                       class="{{ 'active' if active_page == 'settings'}}"><i class="fa-solid fa-gear"></i>    Settings</a>
+                </li>
+                <li>
+                    <a href='{{ url_for("logout") }}'
+                       class="{{ 'active' if active_page == 'logout'}}"><i class="fa-solid fa-sign-out-alt"></i>    Logout</a>
+                </li>
+            </ul>
+        </nav>
+        {% block content %}{% endblock %}
+        <!-- <footer>
+            <div>
+                <p>© 2026 Cubix University. All Rights Reserved.</p>
+            </div>
+        </footer> -->
+        <script src="{{ url_for('static', filename='js/main.js')}}"></script>
+        {% if script %}<script src="{{ url_for('static', filename=script)}}"></script>{% endif %}
+    </body>
+</html>
