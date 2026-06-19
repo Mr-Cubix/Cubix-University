@@ -21,63 +21,71 @@
     </head>
     <body>
         <!-- Header Section -->
-        <nav id="navbar">
+        <div id="navbar">
             <!--Logo-->
-            <a href='{{ url_for("home") }}' class="logo">
-                <img src="static/Images/mylogo.png"
-                     alt="Cubix Logo"
-                     width="100px"
-                     height="100px">
-            </a>
-            <!-- Navigation Section -->
-            <ul class="nav-links">
-                <li>
-                    <a href='{{ url_for("dashboard") }}'
-                       class="{{ 'active' if active_page == 'dashboard'}}"><i class="fa-solid fa-table-columns"></i>    Dashboard</a>
-                </li>
-                <li>
-                    <a href='{{ url_for("myprofile") }}'
-                       class="{{ 'active' if active_page == 'myprofile'}}"><i class="fa-solid fa-user"></i>    My Profile</a>
-                </li>
-                <li>
-                    <a href='{{ url_for("academics") }}'
-                       class="{{ 'active' if active_page == 'academics'}}"><i class="fa-solid fa-graduation-cap"></i>    Academics</a>
-                </li>
-                <li>
-                    <a href='{{ url_for("mycourses") }}'
-                       class="{{ 'active' if active_page == 'mycourses'}}"><i class="fa-solid fa-book"></i>    My Courses</a>
-                </li>
-                <li>
-                    <a href='{{ url_for("attendance") }}'
-                       class="{{ 'active' if active_page == 'attendance'}}"><i class="fa-solid fa-calendar-check"></i>    Attendance</a>
-                </li>
-                <li>
-                    <a href='{{ url_for("result") }}'
-                       class="{{ 'active' if active_page == 'result'}}"><i class="fa-solid fa-chart-bar"></i>    Result</a>
-                </li>
-                <li>
-                    <a href='{{ url_for("timetable") }}'
-                       class="{{ 'active' if active_page == 'timetable'}}"><i class="fa-solid fa-calendar"></i>    TimeTable</a>
-                </li>
-                <li>
-                    <a href='{{ url_for("notices") }}'
-                       class="{{ 'active' if active_page == 'notices'}}"><i class="fa-solid fa-bell"></i>    Notices</a>
-                </li>
-                <li>
-                    <a href='{{ url_for("downloads") }}'
-                       class="{{ 'active' if active_page == 'downloads'}}"><i class="fa-solid fa-download"></i>    Downloads</a>
-                </li>
-                <li>
-                    <a href='{{ url_for("settings") }}'
-                       class="{{ 'active' if active_page == 'settings'}}"><i class="fa-solid fa-gear"></i>    Settings</a>
-                </li>
-                <li>
-                    <a href='{{ url_for("logout") }}'
-                       class="{{ 'active' if active_page == 'logout'}}"><i class="fa-solid fa-sign-out-alt"></i>    Logout</a>
-                </li>
-            </ul>
-        </nav>
-        {% block content %}{% endblock %}
+            <div>
+                <a href='{{ url_for("home") }}' class="logo">
+                    <img src="static/Images/mylogo.png"
+                         alt="Cubix Logo"
+                         width="100px"
+                         height="100px">
+                </a>
+                <!-- Navigation Section -->
+                <ul class="nav-links">
+                    <li>
+                        <a href='{{ url_for("dashboard") }}'
+                           class="{{ 'active' if active_page == 'dashboard'}}"><i class="fa-solid fa-table-columns"></i>    Dashboard</a>
+                    </li>
+                    <li>
+                        <a href='{{ url_for("myprofile") }}'
+                           class="{{ 'active' if active_page == 'myprofile'}}"><i class="fa-solid fa-user"></i>    My Profile</a>
+                    </li>
+                    <li>
+                        <a href='{{ url_for("academics") }}'
+                           class="{{ 'active' if active_page == 'academics'}}"><i class="fa-solid fa-graduation-cap"></i>    Academics</a>
+                    </li>
+                    <li>
+                        <a href='{{ url_for("mycourses") }}'
+                           class="{{ 'active' if active_page == 'mycourses'}}"><i class="fa-solid fa-book"></i>    My Courses</a>
+                    </li>
+                    <li>
+                        <a href='{{ url_for("attendance") }}'
+                           class="{{ 'active' if active_page == 'attendance'}}"><i class="fa-solid fa-calendar-check"></i>    Attendance</a>
+                    </li>
+                    <li>
+                        <a href='{{ url_for("result") }}'
+                           class="{{ 'active' if active_page == 'result'}}"><i class="fa-solid fa-chart-bar"></i>    Result</a>
+                    </li>
+                    <li>
+                        <a href='{{ url_for("timetable") }}'
+                           class="{{ 'active' if active_page == 'timetable'}}"><i class="fa-solid fa-calendar"></i>    TimeTable</a>
+                    </li>
+                    <li>
+                        <a href='{{ url_for("notices") }}'
+                           class="{{ 'active' if active_page == 'notices'}}"><i class="fa-solid fa-bell"></i>    Notices</a>
+                    </li>
+                    <li>
+                        <a href='{{ url_for("downloads") }}'
+                           class="{{ 'active' if active_page == 'downloads'}}"><i class="fa-solid fa-download"></i>    Downloads</a>
+                    </li>
+                    <li>
+                        <a href='{{ url_for("settings") }}'
+                           class="{{ 'active' if active_page == 'settings'}}"><i class="fa-solid fa-gear"></i>    Settings</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <ul class="nav-links">
+                    <li>
+                        <a href='{{ url_for("logout") }}'
+                           class="{{ 'active' if active_page == 'logout'}}"><i class="fa-solid fa-sign-out-alt"></i>    Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <main class="content">
+            {% block content %}{% endblock %}
+        </main>
         <!-- <footer>
             <div>
                 <p>© 2026 Cubix University. All Rights Reserved.</p>
