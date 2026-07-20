@@ -1,12 +1,172 @@
 {% extends 'student_portal/portal_layout.html' %}
-<div class="student-info">
-    <div>
-        <i class="fa-solid fa-bell"></i>
+{% block content %}
+    <div class="main-contents">
+        <h1>
+            <span class="welcome-text">Welcome to Cubix University,
+                <br>
+            </span>
+            <span class="student-name">Ahmad Abulfathi!</span>
+        </h1>
     </div>
-    <div>
-        <i class="fa-regular fa-user"></i>
-        <h1>TEST DASHBOARD</h1>
-        <p>Reg Num: CST/24/SWE/00180</p>
+    <div class="main-notice">
+        <p>
+            <span class="red bold center">2025/2026 Notice</span>
+            <span class="light-green center">Cubix University Management wishes to inform students that ALL
+                activities related to undergraduate registration will close on Thurs August 01 2026 00:00:00 GMT +0100
+                (West Africa Time). Students are advised to conclude all course registration activities before the closing date
+                as complains relating to registration would not be entertained after the closing date. Any returning student that did not
+                register during this stipulated time is advised to suspend his
+            studies till next session.</span>
+            <span class="dark-green center">There are 06 days 20 hr 26 min 08 sec Left</span>
+            <span class="red center">It's mandatory and part of the registration exercise to
+                contact your level coordinatinator before starting your course registration
+                and after for cross checking and validation of your course registration.
+                Any student that failed to do so will be liable for any mistake made during
+            the registration and his complain will not be entertained.</span>
+        </p>
     </div>
-</div>
-{% block content %}{% endblock %}
+    <div class="student-info">
+        <div class="student-info-img">
+            <img src="static/images/student.jpg"
+                 alt="Student"
+                 width="120px"
+                 height="120px">
+        </div>
+        <div class="student-info-details-1">
+            <p>
+                <strong>Faculty:</strong> Computing
+            </p>
+            <p>
+                <strong>Department:</strong> Software Engineering
+            </p>
+            <p>
+                <strong>Level:</strong> 1
+            </p>
+        </div>
+        <div class="student-info-details-2">
+            <p>
+                <strong>Registration Number:</strong> CST/24/SWE/00199
+            </p>
+            <p>
+                <strong>Academic Session:</strong> 2023/2024
+            </p>
+            <p>
+                <strong>Relationship Status:</strong> Single
+            </p>
+        </div>
+        <div class="status">
+            <p>Admitted</p>
+        </div>
+    </div>
+    <div class="stats-container">
+        <div class="status-card level">
+            <div class="icon">
+                <i class="fa-solid fa-user-graduate"></i>
+            </div>
+            <div class="content">
+                <h4>Current Level</h4>
+                <h2>100 Level</h2>
+            </div>
+        </div>
+        <div class="status-card progress">
+            <div class="icon">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <div class="content">
+                <h4>CGPA</h4>
+                <h2>N/A</h2>
+            </div>
+        </div>
+        <div class="status-card courses">
+            <div class="icon">
+                <i class="fa-solid fa-book-open"></i>
+            </div>
+            <div class="content">
+                <h4>Registered Courses</h4>
+                <h2>6 of 8</h2>
+            </div>
+        </div>
+        <div class="status-card registration">
+            <div class="icon">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <div class="content">
+                <h4>Registration Status</h4>
+                <h2>Completed</h2>
+            </div>
+        </div>
+    </div>
+    <div class="student-portal-status">
+        <div class="portal-status-item">
+            <a class="notice-link" href="#">Recent Notices</a>
+            <div class="notice">
+                <div class="the-notices">
+                    <div class="point-notices">
+                        <i class="fa-solid fa-circle red-icon"></i>
+                        <p>General Orientation for All Students</p>
+                    </div>
+                    <small>May 20, 2026</small>
+                </div>
+            </div>
+            <div class="notice">
+                <div class="the-notices">
+                    <div class="point-notices">
+                        <i class="fa-solid fa-circle green-icon"></i>
+                        <p>Examination Timetable</p>
+                    </div>
+                    <small>May 20, 2026</small>
+                </div>
+            </div>
+            <div class="notice">
+                <div class="the-notices">
+                    <div class="point-notices">
+                        <i class="fa-solid fa-circle blue-icon"></i>
+                        <p>Mid Semester Registration</p>
+                    </div>
+                    <small>May 20, 2026</small>
+                </div>
+            </div>
+        </div>
+        <div class="portal-status-item">
+            <a href="" class="notice-link">Downloads</a>
+            <a class="a-links" href="#">Admission Letter</a>
+            <br>
+            <a class="a-links" href="#">Admission Slip</a>
+            <br>
+            <a class="a-links" href="#">Student Handbook</a>
+            <br>
+            <a class="a-links" href="#">Registration Guide</a>
+            <br>
+        </div>
+        <div class="portal-status-item">
+            <h2>Recent Activities</h2>
+            <div class="notice">
+                <div class="the-notices">
+                    <div class="point-notices">
+                        <i class="fa-solid fa-circle blue-icon"></i>
+                        <p>Course Registration completed</p>
+                    </div>
+                    <small>6 Courses Registered</small>
+                </div>
+            </div>
+            <div class="notice">
+                <div class="the-notices">
+                    <div class="point-notices">
+                        <i class="fa-solid fa-circle red-icon"></i>
+                        <p>Profile Updated.</p>
+                    </div>
+                    <small>Profile information updated successfully.</small>
+                </div>
+            </div>
+            <div class="notice">
+                <div class="the-notices">
+                    <div class="point-notices">
+                        <i class="fa-solid fa-circle green-icon"></i>
+                        <p>Department notice published.</p>
+                    </div>
+                    <small>Check the notices section for more details.</small>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

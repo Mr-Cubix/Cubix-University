@@ -133,6 +133,17 @@ def timetable():
     )
 
 
+@app.route("/schoolfees")
+def schoolfees():
+    return render_template(
+        "student_portal/schoolfees.html",
+        title="School Fees",
+        stylesheet="css/student_portal_css/schoolfees.css",
+        script="js/schoolfees.js",
+        active_page="schoolfees",
+    )
+
+
 @app.route("/notices")
 def notices():
     return render_template(

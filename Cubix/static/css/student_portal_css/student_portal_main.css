@@ -10,8 +10,8 @@ html {
 }
 
 body {
-    font-family: 'Times New Roman', Times, serif;
-    background: white;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #c7cbc7;
     width: 100vw;
     overflow-x: hidden;
 }
@@ -26,26 +26,6 @@ body {
 
 .logo img {
     width: 100px;
-}
-
-
-#navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 15%;
-    height: 100vh;
-    overflow-y: auto;
-    background: linear-gradient(90deg, #0f3d2e, #0a2e23);
-    color: white;
-    z-index: 10;
-    padding: 10px;
-    gap: 100px;
-    display: grid;
-    align-items: left;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    border: 3px solid #0a2e23;
 }
 
 
@@ -89,15 +69,98 @@ body {
     border-radius: 10px;
 }
 
-.content {
-    position: relative;
-    margin-left: 15%;
-    padding: 20px;
-    color: #333;
-    width: 85%;
-    min-height: 100vh;
-    background-color: #f5f5f5;
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 190px;
+    height: 100vh;
+    overflow-y: auto;
+    background: linear-gradient(90deg, #0f3d2e, #0a2e23);
+    color: white;
+    z-index: 10;
+    padding: 10px;
+    gap: 100px;
+    display: grid;
+    align-items: left;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border: 3px solid #0a2e23;
 }
+
+.main-content {
+    margin-left: 200px;
+}
+
+.main-content h2 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 190px;
+    right: 0;
+    height: 60px;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+
+.topbar-right {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: right;
+    gap: 20px;
+}
+
+.notification {
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.profile i {
+    margin-right: 15px;
+}
+
+.profile img {
+    display: inline;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile span {
+    font-size: 14px;
+    font-weight: bolder;
+}
+
+
+.content {
+    /* background-color: #ddd; */
+    margin-left: 0px;
+    padding-top: 80px;
+}
+
 
 
 

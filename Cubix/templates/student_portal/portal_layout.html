@@ -21,7 +21,7 @@
     </head>
     <body>
         <!-- Header Section -->
-        <div id="navbar">
+        <aside id="navbar" class="sidebar">
             <!--Logo-->
             <div>
                 <a href='{{ url_for("home") }}' class="logo">
@@ -58,7 +58,11 @@
                     </li>
                     <li>
                         <a href='{{ url_for("timetable") }}'
-                           class="{{ 'active' if active_page == 'timetable'}}"><i class="fa-solid fa-calendar"></i>    TimeTable</a>
+                           class="{{ 'active' if active_page == 'timetable'}}"><i class="fa-solid fa-wallet"></i>    TimeTable</a>
+                    </li>
+                    <li>
+                        <a href='{{ url_for("schoolfees") }}'
+                           class="{{ 'active' if active_page == 'schoolfees'}}"><i class="fa-solid fa-calendar"></i>    School Fees</a>
                     </li>
                     <li>
                         <a href='{{ url_for("notices") }}'
@@ -82,10 +86,27 @@
                     </li>
                 </ul>
             </div>
+        </aside>
+        <div class="main-content">
+            <nav class="navbar">
+                <h2>Student Portal</h2>
+                <div class="topbar-right">
+                    <div class="profile">
+                        <i class="fa-regular fa-bell"></i>
+                        <a href='{{ url_for("settings")}}'>
+                            <img src="static/images/student.jpg"
+                                alt="Student"
+                                width="40px"
+                                height="40px">
+                        </a>
+                        <span>Ahmad Abulfathi</span>
+                    </div>
+                </div>
+            </nav>
+            <div class="content">
+                {% block content %}{% endblock %}
+            </div>
         </div>
-        <main class="content">
-            {% block content %}{% endblock %}
-        </main>
         <!-- <footer>
             <div>
                 <p>© 2026 Cubix University. All Rights Reserved.</p>
